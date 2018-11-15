@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 20:48:04 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/15 17:32:45 by yomai-va         ###   ########.fr       */
+/*   Created: 2018/11/15 20:07:34 by yomai-va          #+#    #+#             */
+/*   Updated: 2018/11/15 20:08:00 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-void	*ft_memset(void *b, int c, size_t len)
+int		ft_toupper(int c)
 {
-	unsigned char *dst;
-
-	dst = b;
-	if (b == NULL || len <= 0)
-		return (b);
-	while (len > 0)
+	if (c <= 97 && c >= 122)
 	{
-		*dst = (unsigned char)c;
-		dst++;
-		len--;
+		c -= 32;
+		return (c);
 	}
-	return (dst);
+	else
+		return (c);
 }

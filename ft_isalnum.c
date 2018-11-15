@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 20:48:04 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/15 17:32:45 by yomai-va         ###   ########.fr       */
+/*   Created: 2018/11/15 20:03:59 by yomai-va          #+#    #+#             */
+/*   Updated: 2018/11/15 20:04:23 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-void	*ft_memset(void *b, int c, size_t len)
+int		ft_isalnum(int c)
 {
-	unsigned char *dst;
-
-	dst = b;
-	if (b == NULL || len <= 0)
-		return (b);
-	while (len > 0)
-	{
-		*dst = (unsigned char)c;
-		dst++;
-		len--;
-	}
-	return (dst);
+	if ((48 <= c && c <= 57) || (65 <= c && c <= 90) || (97 <= c && c <= 122))
+		return (1);
+	else
+		return (0);
 }

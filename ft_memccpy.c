@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 20:48:04 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/15 17:32:45 by yomai-va         ###   ########.fr       */
+/*   Created: 2018/11/14 18:26:26 by yomai-va          #+#    #+#             */
+/*   Updated: 2018/11/15 17:28:03 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memccpy(void *restrict dst, const void *restrict src,
+int c, size_t n)
 {
-	unsigned char *dst;
+	size_t	i;
+	char	*d1;
+	char	*s1;
 
-	dst = b;
-	if (b == NULL || len <= 0)
-		return (b);
-	while (len > 0)
+	d1 = (char *)dst;
+	s1 = (char *)src;
+	i = 0;
+	while (i <= n)
 	{
-		*dst = (unsigned char)c;
-		dst++;
-		len--;
+		d1[i] = s1[i];
+		if (s1[i] == (unsigned char)c)
+		{
+			return (d1 + i + 1);
+		}
+		i++;
 	}
-	return (dst);
+	return (NULL);
 }

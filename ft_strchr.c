@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 20:48:04 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/15 17:32:45 by yomai-va         ###   ########.fr       */
+/*   Created: 2018/11/15 18:20:32 by yomai-va          #+#    #+#             */
+/*   Updated: 2018/11/15 19:10:01 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+char	*ft_strchr(const char *s, int c)
 {
-	unsigned char *dst;
+	int		i;
+	char	*s2;
 
-	dst = b;
-	if (b == NULL || len <= 0)
-		return (b);
-	while (len > 0)
+	s2 = (char*)s;
+	i = 0;
+	while (s2)
 	{
-		*dst = (unsigned char)c;
-		dst++;
-		len--;
+		if (s2[i] == (char)c)
+			return (s2 + i);
+		i++;
 	}
-	return (dst);
+	return (NULL);
 }

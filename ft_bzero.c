@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 20:48:04 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/15 17:32:45 by yomai-va         ###   ########.fr       */
+/*   Created: 2018/11/14 15:38:30 by yomai-va          #+#    #+#             */
+/*   Updated: 2018/11/14 16:24:41 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include <stdio.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *dst;
+	char *c;
 
-	dst = b;
-	if (b == NULL || len <= 0)
-		return (b);
-	while (len > 0)
+	c = s;
+	while (n != 0)
 	{
-		*dst = (unsigned char)c;
-		dst++;
-		len--;
+		*c = '\0';
+		c++;
+		n--;
 	}
-	return (dst);
 }

@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 20:48:04 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/15 17:32:45 by yomai-va         ###   ########.fr       */
+/*   Created: 2018/11/14 17:23:54 by yomai-va          #+#    #+#             */
+/*   Updated: 2018/11/14 18:22:57 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char *dst;
+	size_t	i;
+	char	tmp;
+	char	*s1;
+	char	*s2;
 
-	dst = b;
-	if (b == NULL || len <= 0)
-		return (b);
-	while (len > 0)
+	i = 0;
+	s1 = (char *)dst;
+	s2 = (char *)src;
+	while (len)
 	{
-		*dst = (unsigned char)c;
-		dst++;
+		tmp = s2[i];
+		s1[i] = s2[i];
+		i++;
 		len--;
 	}
-	return (dst);
+	return (s1);
 }

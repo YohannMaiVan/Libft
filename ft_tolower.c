@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 20:48:04 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/15 17:32:45 by yomai-va         ###   ########.fr       */
+/*   Created: 2018/11/15 20:08:35 by yomai-va          #+#    #+#             */
+/*   Updated: 2018/11/15 20:08:59 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-void	*ft_memset(void *b, int c, size_t len)
+int		ft_tolower(int c)
 {
-	unsigned char *dst;
-
-	dst = b;
-	if (b == NULL || len <= 0)
-		return (b);
-	while (len > 0)
+	if (c <= 90 && c >= 65)
 	{
-		*dst = (unsigned char)c;
-		dst++;
-		len--;
+		c += 32;
+		return (c);
 	}
-	return (dst);
+	else
+		return (c);
 }
