@@ -6,7 +6,7 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 17:35:14 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/15 18:01:35 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/11/15 23:22:38 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	while (s1 || s2)
+	while ((s1 || s2) && n > 0)
 	{
 		if (s1 != s2)
 		{
@@ -22,6 +22,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		}
 		s1++;
 		s2++;
+		n--;
 	}
 	return (0);
 }

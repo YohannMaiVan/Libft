@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/15 20:07:34 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/16 20:09:29 by yomai-va         ###   ########.fr       */
+/*   Created: 2018/11/15 21:11:00 by yomai-va          #+#    #+#             */
+/*   Updated: 2018/11/15 21:45:13 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_toupper(int c)
+#include <stdlib.h>
+#include <string.h>
+
+void	*ft_memalloc(size_t size)
 {
-	if (c >= 97 && c <= 122)
-	{
-		c -= 32;
-		return (c);
-	}
-	else
-		return (c);
+	int *mem;
+
+	mem = (int *)malloc(sizeof(size));
+	if (mem = NULL)
+		return (NULL);
+	return (mem);
 }

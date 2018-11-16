@@ -6,7 +6,7 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 19:35:34 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/15 19:52:31 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/11/16 21:46:53 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,9 @@ char	*ft_strnstr(char *str, char *to_find, int len)
 		return (str);
 	if (ft_strlen(str) < ft_strlen(to_find))
 		return (0);
-	while (str[i] && i < len)
+	if (len == 0)
+		return (0);
+	while (str[i] && i < len - 2)
 	{
 		if (ft_strncmpbool(&str[i], to_find, ft_strlen(to_find)) == 1)
 			return (&str[i]);

@@ -1,32 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/14 21:14:06 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/15 23:20:49 by yomai-va         ###   ########.fr       */
+/*   Created: 2018/11/16 20:15:43 by yomai-va          #+#    #+#             */
+/*   Updated: 2018/11/16 21:14:33 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
+#include <stdlib.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int		ft_strlen(char *str)
 {
-	char	*d1;
-	size_t	i;
+	int i;
 
 	i = 0;
-	d1 = (char *)s;
-	while (i < n)
+	while (str[i])
+		i++;
+	return (i);
+}
+
+char	*ft_strmapi(char const *s, char
+(*f)(unsigned int, char))
+{
+	int		i;
+	char	*str;
+
+	i = 0;
+	if ((!f) || (!s))
+		return (NULL);
+	str = (char *)malloc(sizeof(*str) * ft_strlen((char *)s) + 1);
+	if (!str)
+		return (NULL);
+	while (s[i])
 	{
-		if (d1[i] == (unsigned char)c)
-		{
-			//printf("The value of d1 is : %c\n", *(d1 + i));
-			return (d1 + i);
-		}
+		str[i] = f(i, s[i]);
 		i++;
 	}
-	return (NULL);
+	str[i] = '\0';
+	return (str);
 }
