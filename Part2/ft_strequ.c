@@ -6,20 +6,24 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 21:15:14 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/16 21:39:00 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/11/19 16:03:51 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strequ(char const *s1, char const *s2)
+#include <string.h>
+
+int		ft_strequ(char const *s1, char const *s2)
 {
 	int i;
 
 	i = 0;
+	if (!s1 || !s2)
+		return (NULL);
 	while (s1[i] && s2[i])
 	{
-		if (s1[i] == s2[i])
-			i++;
+		if (s1[i] != s2[i])
+			return (0);
+		i++;
 	}
 	return (1);
-
 }

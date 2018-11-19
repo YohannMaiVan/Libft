@@ -1,45 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/16 20:15:43 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/19 16:06:22 by yomai-va         ###   ########.fr       */
+/*   Created: 2018/11/19 15:53:53 by yomai-va          #+#    #+#             */
+/*   Updated: 2018/11/19 16:03:42 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-#include <stdlib.h>
 
-int		ft_strlen(char *str)
+int	ft_strnequ(char const *s1, char const *s2,
+size_t n)
 {
-	int i;
+	size_t i;
 
 	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strmapi(char const *s, char(*f)
-(unsigned int, char))
-{
-	int		i;
-	char	*str;
-
-	i = 0;
-	if ((!f) || (!s))
+	if (!s1 || !s2)
 		return (NULL);
-	str = (char *)malloc(sizeof(*str) * ft_strlen((char *)s) + 1);
-	if (!str)
-		return (NULL);
-	while (s[i])
+	while (s1[i] && s2[i] && i != n)
 	{
-		str[i] = f(i, s[i]);
+		if (s1[i] != s2[i])
+			return (0);
 		i++;
+		if ((s1[i] == '\0' && s2[i] != '\0') ||
+		(s1[i] != '\0' && s2[i] == '\0'))
+			return (0);
 	}
-	str[i] = '\0';
-	return (str);
+	return (1);
 }
