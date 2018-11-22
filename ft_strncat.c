@@ -6,9 +6,11 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 14:10:05 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/13 14:10:11 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/11/21 21:09:40 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strncat(char *dest, char *src, int nb)
 {

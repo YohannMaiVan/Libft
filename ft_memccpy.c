@@ -6,11 +6,11 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 18:26:26 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/15 17:28:03 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/11/22 20:09:56 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memccpy(void *restrict dst, const void *restrict src,
 int c, size_t n)

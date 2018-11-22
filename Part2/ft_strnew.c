@@ -6,7 +6,7 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 21:30:34 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/15 21:44:39 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/11/21 20:45:34 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnew(size_t size)
 
 	i = 0;
 	str = (char *)malloc(sizeof(size_t) + 1);
-	if (str = NULL)
+	if (str == NULL)
 		return (NULL);
 	while (i < size)
 	{

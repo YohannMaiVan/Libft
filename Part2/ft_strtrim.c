@@ -6,14 +6,14 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 16:37:02 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/19 19:54:07 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/11/20 16:12:54 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdlib.h>
 
-int	ft_blank(char c)
+int		ft_blank(char c)
 {
 	if (c == ' ' || c == '\t' || c == '\n')
 		return (1);
@@ -57,17 +57,4 @@ char	*ft_strtrim(char const *s)
 		str[i++] = s[start++];
 	str[i] = '\0';
 	return (str);
-}
-
-int	main(void)
-{
-	const char s[100];
-	char *str;
-	//strcpy((char *)s, " ");
-	strcpy((char *)s, "    HELLO     TOTO    ");
-	printf("|%s|\n", s);
-	str = ft_strtrim(s);
-	printf("|%s|\n", str);
-	
-	return (0);
 }

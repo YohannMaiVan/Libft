@@ -6,71 +6,28 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 19:35:34 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/16 21:46:53 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/11/22 19:04:53 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-int		ft_strcmp(char *s1, char *s2)
+char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 {
-	unsigned int i;
+	size_t	i;
+	int		j;
 
 	i = 0;
-	while (s1[i] && s2[i])
+	if (!str[0] && !to_find[0])
+		return ((char *)str);
+	while (str[i] && i < n)
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
+		j = 0;
+		while (str[i + j] == to_find[j] && to_find[j] && i + j < n)
+			j++;
+		if (to_find[j] == '\0')
+			return ((char *)str + i);
 		i++;
-	}
-	if ((s1[i] == '\0' && s2[i]) || (s2[i] == '\0' && s1[i]))
-		return (s1[i] - s2[i]);
-	return (0);
-}
-
-int		ft_strncmpbool(const char *s1, const char *s2, int n)
-{
-	int i;
-
-	i = 0;
-	while (s1[i] == s2[i] && i < n)
-	{
-		i++;
-		if (i == n)
-			return (1);
 	}
 	return (0);
-}
-
-int		ft_strlen(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strnstr(char *str, char *to_find, int len)
-{
-	int i;
-
-	i = 0;
-	while (str[i] != to_find[0] && str[i] != '\0')
-		i++;
-	if (ft_strcmp(to_find, "") == 0)
-		return (str);
-	if (ft_strlen(str) < ft_strlen(to_find))
-		return (0);
-	if (len == 0)
-		return (0);
-	while (str[i] && i < len - 2)
-	{
-		if (ft_strncmpbool(&str[i], to_find, ft_strlen(to_find)) == 1)
-			return (&str[i]);
-		else
-			i++;
-	}
-	return (NULL);
 }

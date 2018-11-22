@@ -6,12 +6,11 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 15:38:30 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/14 16:24:41 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/11/21 21:01:02 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

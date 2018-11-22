@@ -6,11 +6,11 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 13:19:08 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/13 13:19:13 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/11/21 21:08:19 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(char *src)
 {

@@ -6,66 +6,28 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 19:19:08 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/15 19:34:19 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/11/22 19:47:08 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
-{
-	unsigned int i;
+#include "libft.h"
 
-	i = 0;
-	while (s1[i] && s2[i])
-	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-	}
-	if ((s1[i] == '\0' && s2[i]) || (s2[i] == '\0' && s1[i]))
-		return (s1[i] - s2[i]);
-	return (0);
-}
-
-int		ft_strncmpbool(const char *s1, const char *s2, int n)
+char	*ft_strstr(const char *str, const char *to_find)
 {
 	int i;
+	int j;
 
 	i = 0;
-	while (s1[i] == s2[i] && i < n)
-	{
-		i++;
-		if (i == n)
-			return (1);
-	}
-	return (0);
-}
-
-int		ft_strlen(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strstr(char *str, char *to_find)
-{
-	int i;
-
-	i = 0;
-	while (str[i] != to_find[0] && str[i] != '\0')
-		i++;
-	if (ft_strcmp(to_find, "") == 0)
-		return (str);
-	if (ft_strlen(str) < ft_strlen(to_find))
-		return (0);
+	if (!str[0] && !to_find[0])
+		return ((char *)str);
 	while (str[i])
 	{
-		if (ft_strncmpbool(&str[i], to_find, ft_strlen(to_find)) == 1)
-			return (&str[i]);
-		else
-			i++;
+		j = 0;
+		while (str[i + j] == to_find[j] && to_find[j])
+			j++;
+		if (to_find[j] == '\0')
+			return ((char *)str + i);
+		i++;
 	}
 	return (0);
 }

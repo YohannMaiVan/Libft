@@ -6,7 +6,7 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 20:15:43 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/19 16:06:22 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/11/20 16:10:26 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int		ft_strlen(char *str)
 	return (i);
 }
 
-char	*ft_strmapi(char const *s, char(*f)
+char	*ft_strmapi(char const *s, char (*f)
 (unsigned int, char))
 {
 	int		i;

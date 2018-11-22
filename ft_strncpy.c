@@ -6,9 +6,11 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 13:55:09 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/13 13:55:15 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/11/21 21:09:51 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
