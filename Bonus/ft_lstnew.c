@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yomai-vai <yomai-va@student.42.fr>         +#+  +:+       +#+        */
+/*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/21 17:18:30 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/26 17:49:55 by yomai-vai        ###   ########.fr       */
+/*   Updated: 2018/11/26 20:57:35 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list	*tmp;
+
 	tmp = (t_list*)malloc(sizeof(t_list));
 	if (tmp = NULL)
 		return (NULL);
@@ -32,3 +33,4 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	return (tmp);
 	free(tmp);
 }
+

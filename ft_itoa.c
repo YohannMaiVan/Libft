@@ -6,13 +6,13 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 16:33:58 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/22 14:26:39 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/11/23 19:08:38 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		len(long nb)
+static	int	len(long nb)
 {
 	int		len;
 
@@ -30,7 +30,7 @@ int		len(long nb)
 	return (len);
 }
 
-char	*ft_itoa(int nb)
+char		*ft_itoa(int nb)
 {
 	char	*str;
 	long	n;

@@ -6,7 +6,7 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/14 16:13:16 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/21 21:02:32 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/11/23 20:44:05 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,17 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t i;
+	size_t	i;
+	char	*d1;
+	char	*s1;
 
+	d1 = (char *)dst;
+	s1 = (char *)src;
 	i = 0;
-	while (n != 0)
+	while (i < n)
 	{
-		((char *)dst)[i] = ((char *)src)[i];
+		d1[i] = s1[i];
 		i++;
-		n--;
 	}
-	return (dst);
+	return (d1);
 }

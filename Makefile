@@ -6,7 +6,7 @@
 #    By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/08 19:36:37 by yomai-va          #+#    #+#              #
-#    Updated: 2018/11/22 19:32:41 by yomai-va         ###   ########.fr        #
+#    Updated: 2018/11/23 20:31:10 by yomai-va         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,6 +80,6 @@ clean:
 		/bin/rm -f	$(FILES)
 
 fclean:	clean
-		/bin/rm -f	$(FILES)	$(NAME)
+		/bin/rm -f	$(NAME)
 
 re:	fclean all
