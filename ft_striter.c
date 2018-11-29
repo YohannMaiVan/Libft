@@ -6,7 +6,7 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 17:18:49 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/21 21:08:29 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/11/28 15:14:22 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_striter(char *s, void (*f)(char *))
 	int i;
 
 	i = 0;
+	if ((!s) || (!f))
+		return ;
 	while (s[i])
 	{
 		f(&s[i]);

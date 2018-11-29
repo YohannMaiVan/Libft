@@ -6,7 +6,7 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 16:37:02 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/21 21:17:46 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/11/28 16:46:45 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,16 @@ static	int		ft_blank(char c)
 	return (0);
 }
 
+static	int		ft_check_blank(char *str)
+{
+	int i;
+
+	i = 0;
+	while (str[i] && ft_blank(str[i]) == 1)
+		i++;
+	return (i);
+}
+
 char			*ft_strtrim(char const *s)
 {
 	int		i;
@@ -26,24 +36,15 @@ char			*ft_strtrim(char const *s)
 	int		end;
 	char	*str;
 
-	i = 0;
-	start = i;
-	while (s[i] && ft_blank(s[i]) == 1)
-		i++;
-	start = i;
-	i = 0;
-	while (s[i])
-		i++;
-	i--;
-	end = i;
-	while (end > start && ft_blank(s[i--]) == 1)
-		end--;
+	if (!s)
+		return (NULL);
+	start = ft_check_blank((char *)s);
+	i = ft_strlen(s) - 1;
+	while (i > start && ft_blank(s[i]) == 1)
+		i--;
 	end = i;
 	if (!(str = (char *)malloc(sizeof(char) * ((end - start) + 1))))
 		return (NULL);
-	i = 0;
-	while (start <= end + 1)
-		str[i++] = s[start++];
-	str[i] = '\0';
+	str = ft_strsub(s, start, ((end + 1) - start));
 	return (str);
 }

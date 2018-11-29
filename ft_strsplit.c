@@ -6,7 +6,7 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 19:56:39 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/21 21:15:02 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/11/28 19:20:13 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ static	int		ft_nbwords(char const *str, char c)
 
 	i = 0;
 	j = 0;
+	if (!str)
+		return (0);
 	while (str[i])
 	{
 		if (str[i] != c && (str[i + 1] == c || str[i + 1] == '\0'))
@@ -37,13 +39,14 @@ char			**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if (!(tab = (char **)malloc(sizeof(char *) * (ft_nbwords(s, c) + 1))))
+	tab = (char **)malloc(sizeof(char *) * (ft_nbwords(s, c) + 1));
+	if (!s || !tab)
 		return (NULL);
 	while (i < ft_nbwords(s, c))
 	{
 		k = 0;
 		if (!(tab[i] = (char *)malloc(sizeof(char) *
-				(ft_strlen((char *)s + 1)))))
+		(ft_strlen((char *)s + 1)))))
 			return (NULL);
 		while (s[j] && s[j] == c)
 			j++;

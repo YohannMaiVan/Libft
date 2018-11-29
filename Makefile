@@ -6,7 +6,7 @@
 #    By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/08 19:36:37 by yomai-va          #+#    #+#              #
-#    Updated: 2018/11/23 20:31:10 by yomai-va         ###   ########.fr        #
+#    Updated: 2018/11/27 20:21:24 by yomai-va         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,9 +63,15 @@ SRC		=	ft_atoi.c \
 		ft_strtrim.c \
 		ft_tolower.c \
 		ft_toupper.c \
-		ft_strdel.c
+		ft_strdel.c \
+		ft_lstnew.c	\
+		ft_lstdelone.c \
+		ft_lstdel.c	\
+		ft_lstadd.c	\
+		ft_lstiter.c \
+		ft_lstmap.c
 
-FLAG	=	-Wall -Wextra -Werror
+FLAG	=	-Wall -Wextra -Werror -I .
 
 FILES	=	$(SRC:.c=.o)
 

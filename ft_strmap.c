@@ -6,7 +6,7 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 18:17:07 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/21 21:09:25 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/11/27 11:15:00 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	char	*str;
 
 	i = 0;
+	if ((!f) || (!s))
+		return (NULL);
 	str = (char *)malloc(sizeof(*str) * ft_strlen((char *)s) + 1);
 	if (!str)
 		return (NULL);
