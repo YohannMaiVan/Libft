@@ -6,11 +6,12 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 16:24:02 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/27 11:42:52 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/12/04 15:07:12 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

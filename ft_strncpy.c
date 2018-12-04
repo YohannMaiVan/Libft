@@ -6,15 +6,15 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 13:55:09 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/21 21:09:51 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/12/03 21:33:55 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
-	unsigned int i;
+	size_t i;
 
 	i = 0;
 	while (src[i] && i < n)

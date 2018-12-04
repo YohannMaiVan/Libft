@@ -6,11 +6,12 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 16:34:51 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/21 21:02:53 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/12/04 14:45:19 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
 void	ft_putchar(char c)
 {

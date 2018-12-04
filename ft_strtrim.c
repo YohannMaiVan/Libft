@@ -6,20 +6,21 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/19 16:37:02 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/28 16:46:45 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/12/04 17:15:38 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-static	int		ft_blank(char c)
+static	int		ft_isspace(char c)
 {
 	if (c == ' ' || c == '\t' || c == '\n')
 		return (1);
 	return (0);
 }
 
-static	int		ft_check_blank(char *str)
+static	int		ft_check_space(char *str)
 {
 	int i;
 
@@ -38,9 +39,9 @@ char			*ft_strtrim(char const *s)
 
 	if (!s)
 		return (NULL);
-	start = ft_check_blank((char *)s);
+	start = ft_check_space((char *)s);
 	i = ft_strlen(s) - 1;
-	while (i > start && ft_blank(s[i]) == 1)
+	while (i > start && ft_isspace(s[i]) == 1)
 		i--;
 	end = i;
 	if (!(str = (char *)malloc(sizeof(char) * ((end - start) + 1))))

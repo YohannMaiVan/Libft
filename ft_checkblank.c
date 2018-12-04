@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_checkblank.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/15 21:22:27 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/12/04 14:59:55 by yomai-va         ###   ########.fr       */
+/*   Created: 2018/12/04 15:40:31 by yomai-va          #+#    #+#             */
+/*   Updated: 2018/12/04 17:07:28 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	ft_memdel(void **ap)
+int		ft_checkblank(char *str)
 {
-	if (!ap)
-		return ;
-	free(*ap);
-	*ap = NULL;
+	int i;
+
+	if (!str)
+		return (0);
+	i = 0;
+	while (str[i] && ft_blank(str[i]) == 1)
+		i++;
+	return (i);
 }

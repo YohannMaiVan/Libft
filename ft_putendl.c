@@ -6,7 +6,7 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 16:38:05 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/21 21:03:05 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/12/04 15:30:04 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putendl(char const *s)
 	int i;
 
 	i = 0;
+	if (!s)
+		return ;
 	while (s[i])
 	{
 		ft_putchar(s[i]);

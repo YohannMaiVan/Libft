@@ -6,11 +6,12 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 20:15:43 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/21 21:09:32 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/12/04 15:09:11 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strmapi(char const *s, char (*f)
 (unsigned int, char))

@@ -6,11 +6,12 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 18:17:07 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/27 11:15:00 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/12/04 15:09:02 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {

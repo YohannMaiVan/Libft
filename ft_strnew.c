@@ -6,11 +6,12 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/15 21:30:34 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/28 15:06:11 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/12/04 15:10:04 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strnew(size_t size)
 {

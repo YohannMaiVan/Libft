@@ -6,11 +6,12 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/21 17:18:30 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/28 18:58:36 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/12/04 15:19:47 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {
@@ -28,7 +29,10 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	{
 		tmp->content = malloc(content_size);
 		if ((tmp->content) == NULL)
+		{
+			free(tmp);
 			return (NULL);
+		}
 		tmp->content_size = content_size;
 		ft_memcpy(tmp->content, content, content_size);
 	}

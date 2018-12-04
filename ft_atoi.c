@@ -6,13 +6,13 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 13:26:50 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/21 21:00:51 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/11/30 22:01:38 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(char *str)
+int		ft_atoi(const char *str)
 {
 	int i;
 	int result;

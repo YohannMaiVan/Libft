@@ -6,13 +6,14 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 16:33:58 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/23 19:08:38 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/12/04 17:16:59 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-static	int	len(long nb)
+static	int	ft_ctdigit(long nb)
 {
 	int		len;
 
@@ -37,7 +38,7 @@ char		*ft_itoa(int nb)
 	int		i;
 
 	n = nb;
-	i = len(n);
+	i = ft_ctdigit(n);
 	if (!(str = (char*)malloc(sizeof(char) * (i + 1))))
 		return (NULL);
 	str[i--] = '\0';

@@ -6,13 +6,13 @@
 /*   By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 14:10:53 by yomai-va          #+#    #+#             */
-/*   Updated: 2018/11/21 21:09:06 by yomai-va         ###   ########.fr       */
+/*   Updated: 2018/12/03 21:17:34 by yomai-va         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	unsigned int i;
 	unsigned int j;

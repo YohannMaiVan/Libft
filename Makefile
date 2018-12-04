@@ -6,7 +6,7 @@
 #    By: yomai-va <yomai-va@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/08 19:36:37 by yomai-va          #+#    #+#              #
-#    Updated: 2018/11/27 20:21:24 by yomai-va         ###   ########.fr        #
+#    Updated: 2018/12/04 17:07:51 by yomai-va         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,12 @@ SRC		=	ft_atoi.c \
 		ft_lstdel.c	\
 		ft_lstadd.c	\
 		ft_lstiter.c \
-		ft_lstmap.c
+		ft_lstmap.c \
+		ft_blank.c \
+		ft_checkblank.c \
+		ft_digitlen.c \
+		ft_nbwords.c \
+		ft_strrev.c
 
 FLAG	=	-Wall -Wextra -Werror -I .
 
